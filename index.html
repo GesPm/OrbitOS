@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body background="/images/brotrustmeidontknoweither.png";>
+    
+    <div style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(50); background-color: rgba(118, 112, 112, 0.485); ; color: #fff;
+    display: flex; justify-content: space-between">
+       
+       <p style="text-align: center; margin-left: 16px; font-size: x-large ;font-weight: 900;
+         background-color: rgb(0, 0, 0); padding: 4px 12px; border-radius: 16px;">
+            OrbitS
+        </p>
+       
+        <p  style="text-align: center; margin: 12; font-size: large ; font-weight: 700;
+         background-color: black ; padding: 10px; border-radius: 8px;">
+
+        Fun fact about our solar system</p>  
+        
+        <p id="saturn" 
+        style= "text-align: center; margin-left: 16px; font-size: large ; font-weight: 700;
+         background-color: black; padding: 8px; border-radius: 16px;">
+          SaturnsTime
+        </p>
+      
+      </div>
+        
+    <div id = "welcome" style =
+    "background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/backround new.png');
+     background-size: cover; background-position: center; background-repeat: no-repeat;
+     border: dashed ; width: fit-content; border-radius: 30px; padding: 14px; position: fixed; top: 215px; left: 430px;">
+     
+     <p id = "welcomeheader"> Grab! </p>
+   
+     <center><h1> <center>Welcome to OrbitOS</center></h1>
+
+     <center><h2><brk></brk>Introduction</h2></center>
+
+  <p><center>Hello! This is <dfn><strong>OrbitOS</strong></dfn>.
+    <br>It's a personalized WebOS, inspired by our Solar System!</center> </p>
+  
+  <p>Future apps will include: Calculator and a ( potentially ) Interactive Solar System :)</p>
+     
+   
+  <p>My Github:</p>
+
+  <a href="https://github.com/GesPm">Github</a>
+
+  <p>Big thank you <strong>HackClub</strong>, the best STEM everything!Join me and every other teen on Hackclub:</p>
+  
+  <a href="https://hackclub.com/">HackClub</a></center>
+
+  </div>
+
+<script>
+  
+  function updateTime() {
+    document.querySelector("#saturn").textContent = new Date().toLocaleString();
+  }
+
+  updateTime();
+  setInterval(updateTime, 1000);
+        
+       </script>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+

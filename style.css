@@ -1,0 +1,16 @@
+img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+}
+
+body {
+  font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+  background-color: rgb(49, 44, 44);
+  color: white ;
+}
+
+h1 {
+  padding: 8px;
+  color: white;
+}
