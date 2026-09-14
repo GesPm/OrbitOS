@@ -1,5 +1,7 @@
 dragElement(document.getElementById("welcome"));
 
+
+
 function dragElement(element) {
     var initialX = 0;
     var initialY = 0;
@@ -154,3 +156,35 @@ function addNumberToCalculator(num) {
         calculatorDisplay.value += num;
     }
 }
+
+var spaceFacts = [
+    "The walnut moon: Saturn's moon, Iapetus, looks exactly like a giant walnut due to a mysterious, 12-mile-high mountain range that runs perfectly along its exact equator",
+    "A day on Venus is longer than a year on Venus: Venus has an extremely slow rotation, taking 243 Earth days to complete one rotation. However, it only takes 225 Earth days for Venus to complete one orbit around the Sun.",
+    "Rings aren't exclusive to gas giants; a 150-mile-wide asteroid named Chariklo was discovered to have two dense, narrow rings orbiting it.",
+    "The absolute edge of our solar system is a theoretical bubble of billions of icy comets called the Oort Cloud, located so far out that the Suns gravitational hold on it is incredibly weak.",
+    "Pluto has red snow",
+    "Uranus smells like rotten eggs due to the presence of hydrogen sulfide in its atmosphere.",
+    "Uranus has an axial tilt of nearly 98 degrees, making it spin completely on its side compared to the rest of the planets",
+    "Despite being the closest planet to the Sun, Mercury harbors thick sheets of water ice inside deep polar craters that never see a single ray of sunlight"
+];
+
+function showRandomFact() {
+    var randomIndex = Math.floor(Math.random() * spaceFacts.length);
+    var fact = spaceFacts[randomIndex];
+    document.querySelector("#funfacttext").innerHTML = fact;
+}
+
+
+var funFactOpen = document.querySelector("#funfactopen");
+var funFactScreen = document.querySelector("#funfact");
+var funFactClose = document.querySelector ("#funfactclose");
+
+funFactOpen.addEventListener("click", function () {
+    openWindow(funFactScreen);
+    showRandomFact();
+});
+
+funFactClose.addEventListener("click", function() {
+    closeWindow(funFactScreen);
+});
+

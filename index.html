@@ -8,15 +8,15 @@
   <body style="background: url('/images/isssssqtion.png') center/cover no-repeat;">
     
     <div id = "top" style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(50); background-color: rgba(118, 112, 112, 0.485); ; color: #fff;
-    display: flex; justify-content: space-between">
+    display: flex; justify-content: space-between;">
        
        <p style="text-align: center; margin-left: 16px; font-size: x-large ;font-weight: 900;
          background-color: rgb(0, 0, 0); padding: 4px 12px; border-radius: 20px;
-         cursor: pointer" id="welcomeopen">OrbitOS</p>
+         cursor: pointer;" id="welcomeopen">OrbitOS</p>
         
        
-        <p  style="text-align: center; margin: 12; font-size: large ; font-weight: 700;
-         background-color: black ; padding: 10px; border-radius: 8px;">
+        <p id = "funfactopen" style="text-align: center; margin: 12; font-size: large ; font-weight: 700;
+         background-color: black ; padding: 10px; border-radius: 8px; cursor: pointer;">
 
         Fun fact about our solar system</p>  
         
@@ -59,7 +59,7 @@
 
   
   
-  <div class="selected" id="calculatoricon" style="padding-top: 600px; padding-left: 16px;">
+  <div class="selected" id="calculatoricon" style="position: fixed ;top: 600px;left: 16px; width: fit-content; height: fit-content; ">
 
     <div style="text-align: center; padding: 30px; filter: drop-shadow(0 0 8px black); width: fit-content">
 
@@ -123,12 +123,34 @@
     
     </div>
     </div>
-
+</div>
   
 
 
 
   </div>
+
+  <div class="window" id="funfact" style="display: none;">
+
+    <div class="windowheader" id="funfactheader">
+
+        <div class="closebutton" id="funfactclose">
+            Close
+        </div>
+
+        <p class="headertext">Fun Fact!</p>
+
+        <div style="width: 16px; margin-right: 6px; height: 16px;"></div>
+
+    </div>
+
+    <div class="funfactbody">
+        <p id="funfacttext">Click to get a fact!</p>
+
+        <button onclick="showRandomFact()">New Fact!!</button>
+    </div>
+
+</div>
 
 
 

@@ -12,6 +12,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   overflow-y: hidden;
+  min-height: 100vh;
 }
 
 h1 {
@@ -94,3 +95,17 @@ h1 {
     cursor: pointer;
 }
 
+.funfactbody {
+    width: 520px;
+    min-height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+#top {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
