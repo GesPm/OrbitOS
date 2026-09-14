@@ -82,6 +82,7 @@ function handleIcon(element) {
     }
 
 
+dragElement(document.querySelector("#funfact"));
 
 dragElement(document.querySelector("#calculator"))
 
