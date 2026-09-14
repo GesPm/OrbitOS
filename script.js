@@ -43,11 +43,114 @@ function dragElement(element) {
 
 var welcomeScreen = document.querySelector("#welcome");
 
-function closeWindow (element) {
 
-element.style.display = "none"
+
+
+ var welcomeScreenClose = document.querySelector ("#welcomeclose")
+
+ var welcomeScreenOpen = document.querySelector ("#welcomeopen")
+
+ welcomeScreenClose.addEventListener ("click", function () {
+    closeWindow(welcomeScreen);
+ });
+
+ welcomeScreenOpen.addEventListener ("click", function() {
+    openWindow (welcomeScreen);
+ });
+
+
+var selectedIcon = undefined
+
+function selectedIcon(element) {
+    element.classList.add("selected");
+    selectedIcon = element
 }
 
-function openWindow (elemnt) {
- element.style.display = "flex"
- }
+function deselectIcon(element) {
+    element.classList.remove("selected");
+    selectedIcon = undefined
+}
+
+function handleIcon(element) {
+    if (element.classList.contains("selected")) {
+        deselectIcon (element) }
+
+    else {
+        selectIcon (element) }
+    }
+
+
+
+dragElement(document.querySelector("#calculator"))
+
+var calculatorScreen = document.querySelector("#calculator")
+
+var calculatorIcon = document.querySelector("#calculatoricon");
+
+var calculatorScreenClose = document.querySelector("#calculatorclose")
+
+calculatorIcon.addEventListener("click", () => {
+    openWindow(calculatorScreen);
+});
+
+calculatorScreenClose.addEventListener("click", () => 
+    closeWindow(calculatorScreen));
+
+function closeWindow(element) {
+    element.style.display = "none";
+}
+
+var biggestIndex = 1;
+var topBar = document.querySelector("#top");
+
+function addWindowTapHandling(element) {
+    element.addEventListener("mousedown", () =>
+        handleWindowTap(element)
+    );
+}
+
+function handleWindowTap(element) {
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
+    deselectIcon(selectedIcon);
+}
+
+function openWindow(element) {
+    element.style.display = "block";
+
+    biggestIndex++;
+    element.style.zIndex = biggestIndex;
+    topBar.style.zIndex = biggestIndex + 1;
+}
+
+
+function initializeWindow(elementName) {
+  var screen = document.querySelector("#" + elementName)
+  addWindowTapHandling(screen)
+  makeClosable(elementName)
+  dragElement(screen)
+}
+ 
+
+var calculatorDisplay = document.querySelector("#calculatordisplay");
+
+
+function addOperatorToCalculator(operator) {
+    calculatorDisplay.value += operator;
+} 
+function clearCalculator () {
+   calculatorDisplay.value = 0;
+}
+
+function calculateResults() {
+    calculatorDisplay.value = eval (calculatorDisplay.value);
+}
+
+function addNumberToCalculator(num) { 
+    if (calculatorDisplay.value === "0") {
+        calculatorDisplay.value = num;
+    } else {
+        calculatorDisplay.value += num;
+    }
+}

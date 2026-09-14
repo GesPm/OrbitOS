@@ -2,18 +2,18 @@
 <html>
   
 <head>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
-  <body background="/images/brotrustmeidontknoweither.png";>
+  <body style="background: url('/images/isssssqtion.png') center/cover no-repeat;">
     
-    <div style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(50); background-color: rgba(118, 112, 112, 0.485); ; color: #fff;
+    <div id = "top" style="position: absolute; width: 100%; display: flex; backdrop-filter: blur(50); background-color: rgba(118, 112, 112, 0.485); ; color: #fff;
     display: flex; justify-content: space-between">
        
        <p style="text-align: center; margin-left: 16px; font-size: x-large ;font-weight: 900;
-         background-color: rgb(0, 0, 0); padding: 4px 12px; border-radius: 16px;">
-            OrbitS
-        </p>
+         background-color: rgb(0, 0, 0); padding: 4px 12px; border-radius: 20px;
+         cursor: pointer" id="welcomeopen">OrbitOS</p>
+        
        
         <p  style="text-align: center; margin: 12; font-size: large ; font-weight: 700;
          background-color: black ; padding: 10px; border-radius: 8px;">
@@ -22,19 +22,21 @@
         
         <p id="saturn" 
         style= "text-align: center; margin-left: 16px; font-size: large ; font-weight: 700;
-         background-color: black; padding: 8px; border-radius: 16px;">
+         background-color: black; padding: 8px; border-radius: 8px;">
           SaturnsTime
         </p>
       
       </div>
         
-    <div id = "welcome" style =
-    "background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/backround new.png');
-     background-size: cover; background-position: center; background-repeat: no-repeat;
-     border: dashed ; width: fit-content; border-radius: 30px; padding: 14px; position: fixed; top: 215px; left: 430px;">
+    
+    
+      <div class = "window" id = "welcome">
      
-     <p id = "welcomeheader"> Grab! </p>
-   
+     <div class = "windowheader"  id = "welcomeheader"> 
+      <p>Grab!</p> </div>
+    
+     <div  class ="closebutton" id = "welcomeclose"><p>Close</p></div>
+    
      <center><h1> <center>Welcome to OrbitOS</center></h1>
 
      <center><h2><brk></brk>Introduction</h2></center>
@@ -54,6 +56,81 @@
   <a href="https://hackclub.com/">HackClub</a></center>
 
   </div>
+
+  
+  
+  <div class="selected" id="calculatoricon" style="padding-top: 600px; padding-left: 16px;">
+
+    <div style="text-align: center; padding: 30px; filter: drop-shadow(0 0 8px black); width: fit-content">
+
+        <img src="images/calculatorfororbitosthingy.png"
+             style="width: 64px; height: 64px; border-radius: 20px;">
+
+        <p style="margin: 0px; color: #fff;">Calc.</p>
+
+    </div>
+
+</div>
+ 
+
+ 
+ 
+  <div class="window" id="calculator"
+     style="top: calc(50% - 240px); left: calc(50% - 260px); display: none;">
+
+    <div class="windowheader" id="calculatorheader">
+
+        <div class="closebutton" id="calculatorclose" style = "background-color: black">Close
+
+        </div>
+
+        
+        <div style="width: 16px; margin-right: 6px; height: 16px;">
+
+        </div>
+    </div>
+
+<div style="display: flex; flex-direction: column;">
+
+  <div style="background-color: #020202ec; width: 510px; margin-right: 16px; padding: 16px; border-radius: 16px;
+    display: flex; justify-content: space-between; align-items: center">
+        <p style="margin: 0px;">Welcome</p>
+        <p style="font-size: 12px; margin: 0px;">00111011 00101001</p>
+      </div>
+
+    <div class="calculatorbody">
+      <p>Calculator</p>
+    <input type="text" id="calculatordisplay" value="0" disabled />
+    <div class = "calculatorbuttons">
+    
+     <button onclick="addNumberToCalculator('1')">1</button>
+     <button onclick="addNumberToCalculator('2')">2</button>
+     <button onclick="addNumberToCalculator('3')">3</button>
+     <button onclick="addNumberToCalculator('4')">4</button>
+     <button onclick="addNumberToCalculator('5')">5</button>
+     <button onclick="addNumberToCalculator('6')">6</button>
+     <button onclick="addNumberToCalculator('7')">7</button>
+     <button onclick="addNumberToCalculator('8')">8</button>
+     <button onclick="addNumberToCalculator('9')">9</button>
+     <button onclick="addNumberToCalculator('0')">0</button>
+     <button onclick="addOperatorToCalculator('+')">+</button>
+     <button onclick="addOperatorToCalculator('-')">-</button>
+     <button onclick="addOperatorToCalculator('*')">*</button>
+     <button onclick="addOperatorToCalculator('/')">/</button>
+     <button onclick="calculateResults()">=</button>
+     <button onclick="clearCalculator()">C</button>
+    
+    
+    </div>
+    </div>
+
+  
+
+
+
+  </div>
+
+
 
 <script>
   

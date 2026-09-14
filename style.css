@@ -2,15 +2,95 @@ img {
   width: 500px;
   height: 300px;
   object-fit: cover;
+  
 }
 
 body {
   font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif;
   background-color: rgb(49, 44, 44);
   color: white ;
+  overflow-x: hidden;
+  margin: 0;
+  overflow-y: hidden;
 }
 
 h1 {
   padding: 8px;
   color: white;
+} 
+ .closebutton {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
 }
+
+.closebutton {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-color: #020202;
+  border-radius: 24px;
+  border: solid 1px rgba(125, 119, 119, 0.56);
+  margin-left: 4px;
+}
+
+.window {
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('./images/backround new.png');
+     background-size: cover; background-position: center; background-repeat: no-repeat;
+     border: dashed ; width: fit-content; border-radius: 30px; padding: 14px; position: fixed; top: 215px; left: 430px;
+  
+}
+
+.windowheader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: grab;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.calculatorbody {
+    background-color: #020202ec;
+    margin: 6px;
+    border-radius: 12px;
+    width: 520px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.calculatortitle {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+}
+
+.calculatordisplay {
+    width: 100%;
+    height: 55px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 24px;
+    text-align: right;
+    border-radius: 10px;
+    border: 1px solid #555;
+    background-color: #111;
+    color: white;
+}
+
+.calculatorbuttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.calculatorbuttonsb button {
+    height: 55px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
